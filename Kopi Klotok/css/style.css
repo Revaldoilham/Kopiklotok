@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@300;500;600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,700&family=Roboto:wght@100;300;500;700;900&display=swap');
+
+/* Setingan untuk warna */
+:root{
+    --warna-1:#8b4513;
+    --warna-2:#CD853F;
+    --warna-3:#C68E17;
+    --warna-4:#deb887;
+    --warna-5:#737f9e;
+    --warna-6:#ffffff;
+    --background:#f0f0ff;
+    --shadow-1:0 3px 6px 0 rgba(50,50,50,.3);
+}
+
+/* style untuk keseluruhan */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+/* style untuk tag html*/
+body{
+    background-color: var(--background);
+    color: #010101;
+    font-family: 'Poppins', sans-serif;
+    height: 2000px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+section{
+    padding: 6rem 8% 1.2rem;
+}
+
+/* Style untuk navigasi */
+.navigasi{
+    display: flex;
+    padding: 1.4rem 8%;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    position: fixed;
+    z-index: 9999;
+    background-color: var(--warna-6);
+    box-shadow: var(--shadow-1);
+}
+
+.navigasi .logo-navigasi{
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 800;
+    color: var(--warna-1);
+}
+
+.navigasi .navigasi-menu a{
+    margin: 0 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000000;
+    display: inline-block;
+}
+
+.navigasi .navigasi-icon i{
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #000000;
+    display: inline-block;
+}
+
+.navigasi .navigasi-menu a:hover{
+    color: var(--warna-2);
+}
+
+.navigasi .navigasi-menu a::after{
+    content: '';
+    display: block;
+    padding-bottom: 3px;
+    border-bottom: 2px solid var(--warna-2);
+    transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    -webkit-transform: scaleY(0);
+    transition: .2s linear;
+}
+
+.navigasi .navigasi-menu a:hover::after{
+    transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+}
+/* Style untuk navigasi selesai */
+
+/* Style untuk beranda */
+.beranda{
+    background-image: url(../image/Foto-5.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    margin-top: 120px;
+    margin-left: 8%;
+    margin-right: 8%;
+    min-height: 75vh;
+    scroll-margin-top: 120px;
+}
+
+.beranda{
+    padding: 6rem 8% 1.4rem;
+}
+
+.beranda h1{
+    font-size: 2.9rem;
+    max-width: 35rem;
+    color: var(--warna-2);
+    line-height: 1.3;
+    margin-top: 20px;
+}
+
+.beranda p{
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--warna-6);
+    margin-bottom: 14px;
+}
+
+.beranda .btn-beranda{
+    display: inline-block;
+    padding: .5rem 2rem;
+    background-color: var(--warna-1);
+    font-weight: 500;
+    color: var(--warna-6);
+    border-radius: 8px;
+    box-shadow: 1px 1px 3px rgba(2,2,4, 0.8);
+    transition: 0.5s linear;
+}
+
+.beranda .btn-1:hover{
+    transform: scaleX(1.1);
+    -ms-transform: scaleX(1.1);
+    -webkit-transform: scaleX(1.1);
+}
+/* Style untuk beranda selesai */
+.fasilitas h1{
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: #8b4513;
+}
+
+.fasilitas p{
+    font-size:1rem;
+    text-align: center;
+}
+
+.fasilitas .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    justify-content: center;
+    text-align: center;
+    margin-top: 1rem;
+    gap: 25px;
+}
+
+.fasilitas .fasilitas-item{
+    padding: 1rem .5rem;
+    /* text-align: center; */
+    background-color: var(--warna-4);
+    border-radius: 8px;
+    transition: 0.4s ease-out;
+}
+
+.fasilitas .fasilitas-item:hover{
+    transform: translateY(20px);
+}
+
+.fasilitas .fasilitas-item img{
+    width: 100px;
+    height: auto;
+}
+
+.fasilitas .fasilitas-item p{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    color:var(--warna-1);
+}
+/* Style untuk fasilitas selesai */
+
+/* Style untuk tentang kami */
+.tentang-kami h1{
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--warna-1);
+}
+
+.tentang-kami p{
+    font-size: 1rem;
+    text-align: center;
+}
+
+.tentang-kami .row {
+    display: flex;
+    align-items: center;
+}
+
+.tentang-kami .row .video-box{
+    position: relative;
+    flex: 1 1 45rem;
+}
+
+.tentang-kami .row .video-box .tonton{
+    display: block;
+    margin-top: 12px;
+    width: 100%;
+    border-radius: 10px;
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.tentang-kami .row .content{
+    flex: 1 1 45rem;
+    padding: 30px;
+}
+
+.tentang-kami .row .content h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.tentang-kami .row .content p{
+    padding: 4px ;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: justify;
+    color: #363535;
+}
+
+.tentang-kami .row .content .button{
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+}
+
+.tentang-kami .row .content .button .btn-video, .btn-tentang-kami{
+    padding: .5rem 1.4rem;
+    background-color:var(--warna-1);
+    margin: 0 10px;
+    border-radius: 10px;
+    color: var(--warna-6);
+    box-shadow: 1px 1px 3px rgba(2,2,4, 0.8);
+    margin-top: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+/* Style untuk tentang kami selesai */
+
+/* Style untuk daftar menu */
+.daftar-menu h1{
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--warna-1);
+}
+
+.daftar-menu p{
+    font-size: 1rem;
+    text-align: center;
+}
+
+.daftar-menu .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.daftar-menu .menu-item{
+    width: 45%;
+    float: none;
+    padding: 20px;
+    margin-top: 17px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--warna-4);
+    border-radius: 8px;
+    &:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+}
+
+.daftar-menu .menu-item .menu-1, .menu-3{
+    text-align: left;
+}
+
+.daftar-menu .menu-item .menu-2, .menu-4{
+    margin-top: 8px;
+}
+
+.daftar-menu .menu-item .item h4{
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    width: 75%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.daftar-menu .menu-item .item p{
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    width: 25%;
+    text-align: right;
+    margin-bottom: 10px;
+    color: var(--warna-6);
+}
+
+.daftar-menu .info p{
+    display: inline-block;
+    margin-top: 10px;
+    /* margin-left: 30px; */
+    font-size: 11px;
+    animation: bling 1s steps(5, start) infinite;
+    -webkit-animation: bling 1s steps(5, start) infinite;
+}
+
+.daftar-menu .info span{
+    color: #ff0000;
+}
+
+@keyframes bling {
+    to { visibility: hidden; }
+}
+
+@-webkit-keyframes bling {
+    to { visibility: hidden; }
+}
+/* Style untuk daftar menu selesai */
+
+/* Style untuk Foto Dokumentasi */
+.dokumentasi h1{
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--warna-1);
+}
+
+.dokumentasi p{
+    font-size: 1rem;
+    text-align: center;
+}
+
+.dokumentasi .container{
+    margin-top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.dokumentasi .container img{
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.4s;
+    &:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transform: scale(0.9) rotate(-10deg);
+        -ms-transform: scale(0.9) rotate(-10deg);
+        -webkit-transform: scale(0.9) rotate(-10deg);
+    }
+}
+
+.dokumentasi .container .foto-item .pop-up{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+    z-index: 10000;
+}
+
+.dokumentasi .container .foto-item .pop-up > img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 70%;
+}
+
+
+.dokumentasi .container .foto-item .pop-up p{
+    position: absolute;
+    top: 86%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--warna-6);
+    font-size: 1.1rem;
+    text-align: center;
+    display: none;
+}
+
+.dokumentasi .container .foto-item input[type="checkbox"]:checked ~ .pop-up {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dokumentasi .container .foto-item input[type="checkbox"]:checked ~ .pop-up p{
+    display: block;
+    margin-top: 10px;
+}
+
+.dokumentasi .container .foto-item .pop-up .close{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #ff0000;
+    font-size: 40px;
+    font-weight: 500;
+    cursor: pointer;
+}
+/* Style untuk foto selesai */
+
+/* Style untuk lokasi */
+.lokasi h1{
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color:var(--warna-1);
+}
+
+.lokasi p{
+    font-size: 1rem;
+    text-align: center;
+}
+
+.lokasi .map{
+    display: block;
+    margin-top: 12px;
+    text-align: center;
+    width: 100%;
+}
+
+.lokasi .map iframe{
+    margin-top: 12px;
+    margin: auto;
+    border-radius: 10px;
+}
+/* Style untuk lokasi selesai */
+
+/* Style untuk footer */
+.footer{
+    display: flex;
+    padding: 1.4rem 8%;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: var(--warna-6);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: static;
+}
+
+.footer .cp{
+    font-size: 15px;
+    font-weight: 400;
+    color: #737f9e;
+}
+
+.footer .cp .bx-copyright{
+    font-size: .8rem;
+}
+
+.footer .footer-media{
+    display: flex;
+    align-items: center;
+}
+
+.footer .footer-media a{
+    margin: 0 8px;
+    display: inline-block;
+    font-size: 1.4rem;
+    color: #000;
+    cursor: pointer;
+}
+
+.footer .footer-media .bx{
+    background-color:var(--background);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+/* Style untuk footer selesai */
+
+/* Sebagai media untuk responsive */
+/* Jika dibuka dilaptop (default */
+@media (max-width : 1366px){
+    html{
+        font-size: 100%;
+    }
+}
+
+/* Jika dibuka di mobile */
+@media (max-width : 768px){
+    html{
+        font-size: 70%;
+    }
+
+    .navigasi .navigasi-menu{
+        position: absolute;
+        top: 110%;
+        right: -100%;
+        background-color: var(--warna-2);
+        width: 15rem;
+        height: 22vh;
+        border-radius: 10px;
+    }
+
+    .navigasi .navigasi-menu.active{
+        right: 8%;
+        transition: o.4s linear;
+    }
+
+    .navigasi .navigasi-menu a{
+        display: block;
+        margin: 1.1rem;
+        color: #000000;
+        text-align: center;
+    }
+
+    .navigasi .navigasi-menu a:hover{
+        color: var(--warna-6);
+    }
+
+    .navigasi .navigasi-menu a:hover::after{
+        transform: scaleY(0.5);
+    }
+
+    .beranda {
+        text-align: center;
+        min-height: 350px;
+    }
+
+    .fasilitas h1, .tentang-kami h1, .daftar-menu h1, .dokumentasi h1, .lokasi h1{
+        margin-top: 25px;
+    }
+
+    .tentang-kami .row{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tentang-kami .row .content{
+        margin-top: -25rem;
+        width: 450px;
+        flex: 1 1 50rem;
+    }
+
+    .daftar-menu{
+        margin-top: -30rem;
+    }
+
+    .daftar-menu .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .daftar-menu .container .menu-item{
+        width: 100%;
+    }
+
+    .dokumentasi .container .foto-item .pop-up{
+        max-height: 100%;
+    }
+
+    .lokasi .map iframe{
+        width: 330px;
+        height: 220px;
+        text-align: center;
+    }
+}
+
+@media (max-width:450px) {
+    .navigasi .navigasi-menu{
+        position: absolute;
+        top: 110%;
+        right: -100%;
+        background-color: var(--warna-2);
+        width: 15rem;
+        height: 28vh;
+        border-radius: 10px;
+    }
+
+    .tentang-kami .row .content{
+        margin-top: -25rem;
+        width: 350px;
+        flex: 1 1 50rem;
+    }
+
+    .fasilitas .container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 25px;
+    }
+
+}
+/* Selesai & Terima kasih; */
